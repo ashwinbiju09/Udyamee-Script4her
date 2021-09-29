@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Dashboard">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Dash Board</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='nicepage.css') }}" media="screen">
+<link rel="stylesheet" href="{{ url_for('static',filename='Dash-Board.css') }}" media="screen">
+    <script class="u-script" type="text/javascript" src="{{ url_for('static',filename='jquery.js') }}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='nicepage.js') }}" defer=""></script>
+    <meta name="generator" content="Nicepage 3.26.0, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface:400">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "",
+		"logo": "images/Logo.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Dash Board">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-fd24"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <a href="/home2" data-page-id="53617633" class="u-image u-logo u-image-1" data-image-width="500" data-image-height="500" title="HP2">
+          <img src="{{ url_for('static', filename='Logo.png') }}" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1" data-position="">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="/dashboard" style="padding: 10px 0px;">DashBoard</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="/map" style="padding: 10px 0px;">Map</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="/feed" style="padding: 10px 0px;">Feed</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="/scheme" style="padding: 10px 0px;">Schemes</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-grey-90 u-border-hover-grey-50 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="/profile" style="padding: 10px 0px;">Profile</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/dashboard" style="padding: 10px 0px;">DashBoard</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 0px;">Map</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 0px;">Feed</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/scheme" style="padding: 10px 0px;">Schemes</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" style="padding: 10px 0px;">Profile</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-gradient u-section-1" id="sec-00e5">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Dashboard<br>
+          <br>
+        </h1>
+        <div class="u-custom-color-2 u-opacity u-opacity-35 u-radius-40 u-shape u-shape-round u-shape-1"></div>
+        <div class="u-container-style u-group u-radius-35 u-shape-round u-white u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <h3 class="u-align-center u-text u-text-default u-text-2">Today's Revenue</h3><span class="u-custom-color-1 u-icon u-icon-circle u-spacing-10 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 486.404 486.404" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5c2c"></use></svg><svg class="u-svg-content" viewBox="0 0 486.404 486.404" x="0px" y="0px" id="svg-5c2c" style="enable-background:new 0 0 486.404 486.404;"><path style="fill:#E2A63B;" d="M486.404,317.919v55.38c0,18.808-50.155,34.482-111.804,34.482s-110.759-15.151-110.759-33.959  v-6.269l-1.045-43.886h0.522c8.359,16.196,54.335,28.735,109.714,28.735s112.327-15.673,112.327-34.482H486.404z"></path><path style="fill:#F4B844;" d="M371.465,112.074v54.857h-1.045c0,19.331-51.722,34.482-112.849,34.482  c-23.51,0.522-47.543-2.09-70.531-7.837l-1.045,1.045c-11.494-9.404-24.555-16.718-38.661-21.42v-1.045l-1.567-57.992  c3.657,17.763,52.245,31.869,111.282,31.869s113.371-15.151,113.371-33.959H371.465z"></path><path style="fill:#FEDB41;" d="M371.465,113.119L371.465,113.119c0,18.808-51.722,33.959-113.371,33.959  s-108.147-14.106-111.804-31.869c0-0.522-0.522-1.567-0.522-2.09c0-18.808,50.155-34.482,112.327-34.482  C320.265,78.115,371.465,93.788,371.465,113.119z"></path><path style="fill:#F4B844;" d="M263.318,323.666L263.318,323.666l-0.522-11.494l-1.045-47.02  c3.657,17.763,52.245,31.869,111.282,31.869s111.282-15.151,112.849-33.437h0.522v54.335h-1.045  c0,18.808-50.678,34.482-112.327,34.482C311.384,352.4,271.678,339.862,263.318,323.666z"></path><path style="fill:#E2A63B;" d="M188.608,358.67c14.106-13.061,25.078-29.78,30.824-48.065h2.612  c11.494,1.045,22.988,1.567,35.527,1.567h5.224v11.494l1.045,43.886h-5.747c-22.988,0.522-45.453-2.09-67.918-7.314L188.608,358.67z  "></path><path style="fill:#F4B844;" d="M263.318,260.972v2.612l1.045,48.588h-5.225c-13.061,0-25.078-0.522-36.571-1.567h-2.612  c3.657-10.971,5.224-22.465,5.224-33.959c0-7.837-1.045-15.151-2.612-22.465h2.612c10.971,1.045,21.943,1.567,33.959,1.567  l4.702,2.612C263.318,259.404,263.318,260.449,263.318,260.972z"></path><path style="fill:#E2A63B;" d="M187.041,193.576c22.988,5.747,47.02,8.359,70.531,7.837c61.126,0,112.849-15.151,112.849-34.482  h1.045v61.649c-56.947,0-103.445,13.584-109.192,30.824l-4.702-2.612c-11.494,0-22.465-0.522-32.914-1.567h-2.612  c-4.702-24.033-17.241-45.453-36.049-61.127L187.041,193.576z"></path><g><path style="fill:#FEDB41;" d="M223.09,255.225L223.09,255.225c-5.224-24.033-18.286-45.975-37.094-62.171   c-11.494-10.449-25.078-17.763-39.706-21.943c-10.449-3.657-21.943-5.224-32.914-5.224C51.204,165.363,0.526,214.996,0.004,277.167   c-0.522,62.171,49.11,112.849,111.282,113.371c28.735,0,55.902-10.449,77.322-29.78c14.629-13.584,25.6-30.824,31.347-49.633   c3.657-10.971,5.224-21.943,5.224-33.437C225.18,270.376,223.09,262.539,223.09,255.225z"></path><path style="fill:#FEDB41;" d="M485.882,262.539v1.045c-1.567,18.286-52.245,33.437-112.849,33.437s-107.625-14.106-111.282-31.869   v-2.612c0-1.045,0-2.09,0.522-3.135c5.747-17.241,52.245-30.824,109.192-30.824h1.567   C434.682,228.58,485.882,243.731,485.882,262.539z"></path>
+</g><path style="fill:#E2A63B;" d="M113.376,264.106c-9.404,0-17.241-7.837-17.241-17.241c0-9.404,7.837-17.241,17.241-17.241  s17.241,7.837,17.241,17.241c0,5.747,4.702,10.449,10.449,10.449c5.747,0,10.449-4.702,10.449-10.449  c0-16.718-11.494-31.869-27.69-36.571v-4.18c0-5.747-4.702-10.449-10.449-10.449s-10.449,4.702-10.449,10.449v4.18  c-16.718,4.18-28.212,19.331-27.69,36.571c0,20.898,17.241,38.139,38.139,38.139c9.404,0,17.241,7.837,17.241,17.241  c0,9.404-7.837,17.241-17.241,17.241l0,0c-9.404,0-17.241-7.837-17.241-17.241c0-5.747-4.702-10.449-10.449-10.449  s-10.449,4.702-10.449,10.449c0,17.241,11.494,31.869,27.69,36.571v8.359c0,5.747,4.702,10.449,10.449,10.449  s10.449-4.702,10.449-10.449v-8.359c20.375-5.747,31.869-27.167,25.6-47.543C144.723,275.6,130.094,264.106,113.376,264.106z"></path></svg></span><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-164e"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-164e"><g><path d="m418.474 0h-162.474l-20 35 20 42.264c20.028 11.445 35.606 29.825 43.418 51.856h-43.418l-20 32.28 20 32.28h43.418c-7.812 22.03-23.39 40.41-43.418 51.856l-20 39.464 20 30.539c55.651-17.324 98.483-64.013 110.272-121.86h52.203v-64.559h-52.203c-4.858-23.839-14.99-45.783-29.116-64.559h81.319v-64.561z" fill="#ffc34d"></path><path d="m282.729 512 45.65-45.651-72.379-72.378-20 32.029 20 59.271z" fill="#ffc34d"></path><g fill="#ffe14d"><path d="m208.118 258.238h-114.592v64.559l162.474 162.474v-91.301l-71.174-71.174h23.292c16.666 0 32.746-2.547 47.882-7.258v-70.005c-14.131 8.076-30.473 12.705-47.882 12.705z"></path><path d="m93.526 129.119h162.474v64.559h-162.474z"></path><path d="m208.118 0h-114.592v64.559h114.593c17.409 0 33.751 4.629 47.882 12.704v-77.263z"></path>
+</g>
+</g></svg></span>
+            <h4 class="u-custom-font u-text u-text-default u-text-3">3,400</h4>
+          </div>
+        </div>
+        <div class="u-container-style u-group u-radius-35 u-shape-round u-white u-group-2">
+          <div class="u-container-layout u-container-layout-2">
+            <h3 class="u-align-center u-text u-text-default u-text-4">Total Revenue</h3><span class="u-custom-color-1 u-icon u-icon-circle u-spacing-10 u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 486.404 486.404" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-04ce"></use></svg><svg class="u-svg-content" viewBox="0 0 486.404 486.404" x="0px" y="0px" id="svg-04ce" style="enable-background:new 0 0 486.404 486.404;"><path style="fill:#E2A63B;" d="M486.404,317.919v55.38c0,18.808-50.155,34.482-111.804,34.482s-110.759-15.151-110.759-33.959  v-6.269l-1.045-43.886h0.522c8.359,16.196,54.335,28.735,109.714,28.735s112.327-15.673,112.327-34.482H486.404z"></path><path style="fill:#F4B844;" d="M371.465,112.074v54.857h-1.045c0,19.331-51.722,34.482-112.849,34.482  c-23.51,0.522-47.543-2.09-70.531-7.837l-1.045,1.045c-11.494-9.404-24.555-16.718-38.661-21.42v-1.045l-1.567-57.992  c3.657,17.763,52.245,31.869,111.282,31.869s113.371-15.151,113.371-33.959H371.465z"></path><path style="fill:#FEDB41;" d="M371.465,113.119L371.465,113.119c0,18.808-51.722,33.959-113.371,33.959  s-108.147-14.106-111.804-31.869c0-0.522-0.522-1.567-0.522-2.09c0-18.808,50.155-34.482,112.327-34.482  C320.265,78.115,371.465,93.788,371.465,113.119z"></path><path style="fill:#F4B844;" d="M263.318,323.666L263.318,323.666l-0.522-11.494l-1.045-47.02  c3.657,17.763,52.245,31.869,111.282,31.869s111.282-15.151,112.849-33.437h0.522v54.335h-1.045  c0,18.808-50.678,34.482-112.327,34.482C311.384,352.4,271.678,339.862,263.318,323.666z"></path><path style="fill:#E2A63B;" d="M188.608,358.67c14.106-13.061,25.078-29.78,30.824-48.065h2.612  c11.494,1.045,22.988,1.567,35.527,1.567h5.224v11.494l1.045,43.886h-5.747c-22.988,0.522-45.453-2.09-67.918-7.314L188.608,358.67z  "></path><path style="fill:#F4B844;" d="M263.318,260.972v2.612l1.045,48.588h-5.225c-13.061,0-25.078-0.522-36.571-1.567h-2.612  c3.657-10.971,5.224-22.465,5.224-33.959c0-7.837-1.045-15.151-2.612-22.465h2.612c10.971,1.045,21.943,1.567,33.959,1.567  l4.702,2.612C263.318,259.404,263.318,260.449,263.318,260.972z"></path><path style="fill:#E2A63B;" d="M187.041,193.576c22.988,5.747,47.02,8.359,70.531,7.837c61.126,0,112.849-15.151,112.849-34.482  h1.045v61.649c-56.947,0-103.445,13.584-109.192,30.824l-4.702-2.612c-11.494,0-22.465-0.522-32.914-1.567h-2.612  c-4.702-24.033-17.241-45.453-36.049-61.127L187.041,193.576z"></path><g><path style="fill:#FEDB41;" d="M223.09,255.225L223.09,255.225c-5.224-24.033-18.286-45.975-37.094-62.171   c-11.494-10.449-25.078-17.763-39.706-21.943c-10.449-3.657-21.943-5.224-32.914-5.224C51.204,165.363,0.526,214.996,0.004,277.167   c-0.522,62.171,49.11,112.849,111.282,113.371c28.735,0,55.902-10.449,77.322-29.78c14.629-13.584,25.6-30.824,31.347-49.633   c3.657-10.971,5.224-21.943,5.224-33.437C225.18,270.376,223.09,262.539,223.09,255.225z"></path><path style="fill:#FEDB41;" d="M485.882,262.539v1.045c-1.567,18.286-52.245,33.437-112.849,33.437s-107.625-14.106-111.282-31.869   v-2.612c0-1.045,0-2.09,0.522-3.135c5.747-17.241,52.245-30.824,109.192-30.824h1.567   C434.682,228.58,485.882,243.731,485.882,262.539z"></path>
+</g><path style="fill:#E2A63B;" d="M113.376,264.106c-9.404,0-17.241-7.837-17.241-17.241c0-9.404,7.837-17.241,17.241-17.241  s17.241,7.837,17.241,17.241c0,5.747,4.702,10.449,10.449,10.449c5.747,0,10.449-4.702,10.449-10.449  c0-16.718-11.494-31.869-27.69-36.571v-4.18c0-5.747-4.702-10.449-10.449-10.449s-10.449,4.702-10.449,10.449v4.18  c-16.718,4.18-28.212,19.331-27.69,36.571c0,20.898,17.241,38.139,38.139,38.139c9.404,0,17.241,7.837,17.241,17.241  c0,9.404-7.837,17.241-17.241,17.241l0,0c-9.404,0-17.241-7.837-17.241-17.241c0-5.747-4.702-10.449-10.449-10.449  s-10.449,4.702-10.449,10.449c0,17.241,11.494,31.869,27.69,36.571v8.359c0,5.747,4.702,10.449,10.449,10.449  s10.449-4.702,10.449-10.449v-8.359c20.375-5.747,31.869-27.167,25.6-47.543C144.723,275.6,130.094,264.106,113.376,264.106z"></path></svg></span><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0fae"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-0fae"><g><path d="m418.474 0h-162.474l-20 35 20 42.264c20.028 11.445 35.606 29.825 43.418 51.856h-43.418l-20 32.28 20 32.28h43.418c-7.812 22.03-23.39 40.41-43.418 51.856l-20 39.464 20 30.539c55.651-17.324 98.483-64.013 110.272-121.86h52.203v-64.559h-52.203c-4.858-23.839-14.99-45.783-29.116-64.559h81.319v-64.561z" fill="#ffc34d"></path><path d="m282.729 512 45.65-45.651-72.379-72.378-20 32.029 20 59.271z" fill="#ffc34d"></path><g fill="#ffe14d"><path d="m208.118 258.238h-114.592v64.559l162.474 162.474v-91.301l-71.174-71.174h23.292c16.666 0 32.746-2.547 47.882-7.258v-70.005c-14.131 8.076-30.473 12.705-47.882 12.705z"></path><path d="m93.526 129.119h162.474v64.559h-162.474z"></path><path d="m208.118 0h-114.592v64.559h114.593c17.409 0 33.751 4.629 47.882 12.704v-77.263z"></path>
+</g>
+</g></svg></span>
+            <h4 class="u-custom-font u-text u-text-default u-text-5">28,360</h4>
+          </div>
+        </div>
+        <div class="u-container-style u-group u-radius-35 u-shape-round u-white u-group-3">
+          <div class="u-container-layout u-container-layout-3">
+            <h3 class="u-align-center u-text u-text-default u-text-6">Profile Views</h3><span class="u-custom-color-1 u-icon u-icon-circle u-spacing-10 u-text-black u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 490.667 490.667" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-9242"></use></svg><svg class="u-svg-content" viewBox="0 0 490.667 490.667" x="0px" y="0px" id="svg-9242" style="enable-background:new 0 0 490.667 490.667;"><g><g><path d="M245.333,85.333c-41.173,0-74.667,33.493-74.667,74.667s33.493,74.667,74.667,74.667S320,201.173,320,160    C320,118.827,286.507,85.333,245.333,85.333z M245.333,213.333C215.936,213.333,192,189.397,192,160    c0-29.397,23.936-53.333,53.333-53.333s53.333,23.936,53.333,53.333S274.731,213.333,245.333,213.333z"></path>
+</g>
+</g><g><g><path d="M394.667,170.667c-29.397,0-53.333,23.936-53.333,53.333s23.936,53.333,53.333,53.333S448,253.397,448,224    S424.064,170.667,394.667,170.667z M394.667,256c-17.643,0-32-14.357-32-32c0-17.643,14.357-32,32-32s32,14.357,32,32    C426.667,241.643,412.309,256,394.667,256z"></path>
+</g>
+</g><g><g><path d="M97.515,170.667c-29.419,0-53.333,23.936-53.333,53.333s23.936,53.333,53.333,53.333s53.333-23.936,53.333-53.333    S126.933,170.667,97.515,170.667z M97.515,256c-17.643,0-32-14.357-32-32c0-17.643,14.357-32,32-32c17.643,0,32,14.357,32,32    C129.515,241.643,115.157,256,97.515,256z"></path>
+</g>
+</g><g><g><path d="M245.333,256c-76.459,0-138.667,62.208-138.667,138.667c0,5.888,4.779,10.667,10.667,10.667S128,400.555,128,394.667    c0-64.704,52.629-117.333,117.333-117.333s117.333,52.629,117.333,117.333c0,5.888,4.779,10.667,10.667,10.667    c5.888,0,10.667-4.779,10.667-10.667C384,318.208,321.792,256,245.333,256z"></path>
+</g>
+</g><g><g><path d="M394.667,298.667c-17.557,0-34.752,4.8-49.728,13.867c-5.013,3.072-6.635,9.621-3.584,14.656    c3.093,5.035,9.621,6.635,14.656,3.584C367.637,323.712,380.992,320,394.667,320c41.173,0,74.667,33.493,74.667,74.667    c0,5.888,4.779,10.667,10.667,10.667c5.888,0,10.667-4.779,10.667-10.667C490.667,341.739,447.595,298.667,394.667,298.667z"></path>
+</g>
+</g><g><g><path d="M145.707,312.512c-14.955-9.045-32.149-13.845-49.707-13.845c-52.928,0-96,43.072-96,96    c0,5.888,4.779,10.667,10.667,10.667s10.667-4.779,10.667-10.667C21.333,353.493,54.827,320,96,320    c13.675,0,27.029,3.712,38.635,10.752c5.013,3.051,11.584,1.451,14.656-3.584C152.363,322.133,150.741,315.584,145.707,312.512z"></path>
+</g>
+</g></svg></span>
+            <h4 class="u-custom-font u-text u-text-default u-text-7"> 27</h4>
+            <h5 class="u-custom-font u-text u-text-default u-text-palette-4-dark-1 u-text-8">+88% since last week</h5><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-de4a"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-de4a"><g><g id="Increase_19_"><g><path d="m63.633 422-63.633-63.633 192.869-192.884 90 90 103.916-103.945-30.439-30.425 155.654-31.113-31.113 155.596-30.469-30.425-167.549 167.578-90-90z" fill="#8cd96b"></path>
+</g>
+</g><path d="m386.785 151.538-103.916 103.945-27.012-27.011v127.265l27.012 27.012 167.549-167.578 30.469 30.425 31.113-155.596-155.654 31.113z" fill="#5ab267"></path>
+</g></svg></span>
+          </div>
+        </div>
+        <div class="u-container-style u-group u-radius-35 u-shape-round u-white u-group-4">
+          <div class="u-container-layout u-container-layout-4">
+            <h4 class="u-custom-font u-text u-text-9"> 12</h4>
+            <h3 class="u-align-center u-text u-text-default u-text-10">Total Orders</h3><span class="u-custom-color-1 u-icon u-icon-circle u-spacing-10 u-text-black u-icon-7"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 438.891 438.891" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2828"></use></svg><svg class="u-svg-content" viewBox="0 0 438.891 438.891" x="0px" y="0px" id="svg-2828" style="enable-background:new 0 0 438.891 438.891;"><g><g><g><path d="M347.968,57.503h-39.706V39.74c0-5.747-6.269-8.359-12.016-8.359h-30.824c-7.314-20.898-25.6-31.347-46.498-31.347     c-20.668-0.777-39.467,11.896-46.498,31.347h-30.302c-5.747,0-11.494,2.612-11.494,8.359v17.763H90.923     c-23.53,0.251-42.78,18.813-43.886,42.318v299.363c0,22.988,20.898,39.706,43.886,39.706h257.045     c22.988,0,43.886-16.718,43.886-39.706V99.822C390.748,76.316,371.498,57.754,347.968,57.503z M151.527,52.279h28.735     c5.016-0.612,9.045-4.428,9.927-9.404c3.094-13.474,14.915-23.146,28.735-23.51c13.692,0.415,25.335,10.117,28.212,23.51     c0.937,5.148,5.232,9.013,10.449,9.404h29.78v41.796H151.527V52.279z M370.956,399.185c0,11.494-11.494,18.808-22.988,18.808     H90.923c-11.494,0-22.988-7.314-22.988-18.808V99.822c1.066-11.964,10.978-21.201,22.988-21.42h39.706v26.645     c0.552,5.854,5.622,10.233,11.494,9.927h154.122c5.98,0.327,11.209-3.992,12.016-9.927V78.401h39.706     c12.009,0.22,21.922,9.456,22.988,21.42V399.185z"></path><path d="M179.217,233.569c-3.919-4.131-10.425-4.364-14.629-0.522l-33.437,31.869l-14.106-14.629     c-3.919-4.131-10.425-4.363-14.629-0.522c-4.047,4.24-4.047,10.911,0,15.151l21.42,21.943c1.854,2.076,4.532,3.224,7.314,3.135     c2.756-0.039,5.385-1.166,7.314-3.135l40.751-38.661c4.04-3.706,4.31-9.986,0.603-14.025     C179.628,233.962,179.427,233.761,179.217,233.569z"></path><path d="M329.16,256.034H208.997c-5.771,0-10.449,4.678-10.449,10.449s4.678,10.449,10.449,10.449H329.16     c5.771,0,10.449-4.678,10.449-10.449S334.931,256.034,329.16,256.034z"></path><path d="M179.217,149.977c-3.919-4.131-10.425-4.364-14.629-0.522l-33.437,31.869l-14.106-14.629     c-3.919-4.131-10.425-4.364-14.629-0.522c-4.047,4.24-4.047,10.911,0,15.151l21.42,21.943c1.854,2.076,4.532,3.224,7.314,3.135     c2.756-0.039,5.385-1.166,7.314-3.135l40.751-38.661c4.04-3.706,4.31-9.986,0.603-14.025     C179.628,150.37,179.427,150.169,179.217,149.977z"></path><path d="M329.16,172.442H208.997c-5.771,0-10.449,4.678-10.449,10.449s4.678,10.449,10.449,10.449H329.16     c5.771,0,10.449-4.678,10.449-10.449S334.931,172.442,329.16,172.442z"></path><path d="M179.217,317.16c-3.919-4.131-10.425-4.363-14.629-0.522l-33.437,31.869l-14.106-14.629     c-3.919-4.131-10.425-4.363-14.629-0.522c-4.047,4.24-4.047,10.911,0,15.151l21.42,21.943c1.854,2.076,4.532,3.224,7.314,3.135     c2.756-0.039,5.385-1.166,7.314-3.135l40.751-38.661c4.04-3.706,4.31-9.986,0.603-14.025     C179.628,317.554,179.427,317.353,179.217,317.16z"></path><path d="M329.16,339.626H208.997c-5.771,0-10.449,4.678-10.449,10.449s4.678,10.449,10.449,10.449H329.16     c5.771,0,10.449-4.678,10.449-10.449S334.931,339.626,329.16,339.626z"></path>
+</g>
+</g>
+</g></svg></span><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-8"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-bd7f"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-bd7f" style="enable-background:new 0 0 512 512;"><path style="fill:#A5EB78;" d="M433.139,67.108L201.294,298.953c-6.249,6.249-16.381,6.249-22.63,0L78.861,199.15L0,278.011  l150.547,150.549c10.458,10.458,24.642,16.333,39.431,16.333l0,0c14.788,0,28.973-5.876,39.43-16.333L512,145.968L433.139,67.108z"></path><g style="opacity:0.1;"><path d="M485.921,119.888L187.59,418.22c-8.254,8.253-18.633,13.882-29.847,16.391c9.363,6.635,20.608,10.28,32.235,10.28l0,0   c14.788,0,28.973-5.876,39.43-16.333L512,145.966L485.921,119.888z"></path>
+</g></svg></span>
+          </div>
+        </div>
+        <div class="u-container-style u-group u-radius-35 u-shape-round u-white u-group-5">
+          <div class="u-container-layout u-container-layout-5">
+            <h3 class="u-align-center u-text u-text-default u-text-11">Schemes Applied</h3><span class="u-custom-color-1 u-icon u-icon-circle u-spacing-10 u-text-black u-icon-9"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-da45"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-da45"><g><path d="m446.605 124.392-119.997-119.997c-2.801-2.802-6.624-4.395-10.608-4.395h-210c-24.813 0-45 20.187-45 45v422c0 24.813 20.187 45 45 45h300c24.813 0 45-20.187 45-45v-332c0-4.09-1.717-7.931-4.395-10.608zm-115.605-73.179 68.787 68.787h-53.787c-8.271 0-15-6.729-15-15zm75 430.787h-300c-8.271 0-15-6.729-15-15v-422c0-8.271 6.729-15 15-15h195v75c0 24.813 20.187 45 45 45h75v317c0 8.271-6.729 15-15 15z"></path><path d="m346 212h-180c-8.284 0-15 6.716-15 15s6.716 15 15 15h180c8.284 0 15-6.716 15-15s-6.716-15-15-15z"></path><path d="m346 272h-180c-8.284 0-15 6.716-15 15s6.716 15 15 15h180c8.284 0 15-6.716 15-15s-6.716-15-15-15z"></path><path d="m346 332h-180c-8.284 0-15 6.716-15 15s6.716 15 15 15h180c8.284 0 15-6.716 15-15s-6.716-15-15-15z"></path><path d="m286 392h-120c-8.284 0-15 6.716-15 15s6.716 15 15 15h120c8.284 0 15-6.716 15-15s-6.716-15-15-15z"></path>
+</g></svg></span><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-10"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 64 64" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b5ea"></use></svg><svg class="u-svg-content" viewBox="0 0 64 64" id="svg-b5ea"><g><path d="m51 2h7c2.209 0 4 1.791 4 4v2h-11z" fill="#b5b1a5"></path><path d="m10 62v-55-1c0-2.209 1.791-4 4-4h41c-2.209 0-4 1.791-4 4v52c0 2.209-1.791 4-4 4h-4z" fill="#d9d5ca"></path><g><path d="m10 6v1 9.901c5.668 18.371 21.542 32.256 41 35.052v-45.953c0-2.209 1.791-4 4-4h-41c-2.209 0-4 1.791-4 4z" fill="#f2efe0"></path>
+</g><path d="m43 62c-2.209 0-4-1.791-4-4v-2h-37v2c0 2.209 1.791 4 4 4h36.999z" fill="#f2efe0"></path><path d="m14 10h10v10h-10z" fill="#81b4fc"></path><g><path d="m30 10h18v2h-18z" fill="#b5b1a5"></path>
+</g><g><path d="m27 14h21v2h-21z" fill="#b5b1a5"></path>
+</g><g><path d="m27 18h21v2h-21z" fill="#b5b1a5"></path>
+</g><path d="m14 24h10v10h-10z" fill="#81b4fc"></path><g><path d="m14 34h5.204c-1.961-2.389-3.703-4.965-5.204-7.691z" fill="#5490f5"></path>
+</g><g><path d="m30 24h13v2h-13z" fill="#b5b1a5"></path>
+</g><g><path d="m27 28h11v2h-11z" fill="#b5b1a5"></path>
+</g><g><path d="m27 32h8v2h-8z" fill="#b5b1a5"></path>
+</g><path d="m14 38h10v10h-10z" fill="#5490f5"></path><g><path d="m27 38h9v2h-9z" fill="#b5b1a5"></path>
+</g><g><path d="m27 42h10v2h-10z" fill="#b5b1a5"></path>
+</g><g><path d="m27 46h11v2h-11z" fill="#b5b1a5"></path>
+</g><g><circle cx="47" cy="38" fill="#78b22a" r="15"></circle><path d="m47 23c-3.505 0-6.721 1.211-9.274 3.226-2.014 2.553-3.226 5.77-3.226 9.274 0 8.284 6.716 15 15 15 3.505 0 6.721-1.211 9.274-3.226 2.015-2.553 3.226-5.769 3.226-9.274 0-8.284-6.716-15-15-15z" fill="#94d531"></path><path d="m37 40 3-3 4 4 10-10 3 3-13 13z" fill="#fff"></path>
+</g>
+</g><g><path d="m58 1h-3-41c-2.757 0-5 2.243-5 5v49h-7c-.552 0-1 .447-1 1v2c0 2.757 2.243 5 5 5h36.999.001 4c2.757 0 5-2.243 5-5v-4.811c6.379-2.106 11-8.114 11-15.189s-4.621-13.083-11-15.189v-13.811h10c.552 0 1-.447 1-1v-2c0-2.757-2.243-5-5-5zm-52 60c-1.654 0-3-1.346-3-3v-1h35v1c0 1.125.374 2.164 1.002 3zm55-23c0 7.72-6.28 14-14 14s-14-6.28-14-14 6.28-14 14-14 14 6.28 14 14zm-14-16c-2.802 0-5.436.729-7.729 2h-9.271v2h6.453c-.696.612-1.342 1.277-1.923 2h-7.53v2h6.165c-.372.641-.705 1.307-.987 2h-5.178v2h4.527c-.332 1.281-.527 2.617-.527 4h-4v2h4.139c.086.682.219 1.347.388 2h-4.527v2h5.178c.282.693.615 1.359.987 2h-6.165v2h7.53c2.935 3.653 7.431 6 12.47 6 1.026 0 2.027-.106 3-.292v4.292c0 1.654-1.346 3-3 3h-4c-1.654 0-3-1.346-3-3v-2c0-.553-.448-1-1-1h-28v-49c0-1.654 1.346-3 3-3h37.026c-.635.838-1.026 1.87-1.026 3v16.292c-.973-.186-1.974-.292-3-.292zm14-15h-9v-1c0-1.654 1.346-3 3-3h3c1.654 0 3 1.346 3 3z"></path><path d="m40.707 36.293c-.391-.391-1.023-.391-1.414 0l-3 3c-.391.391-.391 1.023 0 1.414l7 7c.195.195.451.293.707.293s.512-.098.707-.293l13-13c.391-.391.391-1.023 0-1.414l-3-3c-.391-.391-1.023-.391-1.414 0l-9.293 9.293zm13.293-3.879 1.586 1.586-11.586 11.586-5.586-5.586 1.586-1.586 3.293 3.293c.391.391 1.023.391 1.414 0z"></path><path d="m24 9h-10c-.552 0-1 .447-1 1v10c0 .553.448 1 1 1h10c.552 0 1-.447 1-1v-10c0-.553-.448-1-1-1zm-1 10h-8v-8h8z"></path><path d="m30 10h18v2h-18z"></path><path d="m27 14h21v2h-21z"></path><path d="m27 18h21v2h-21z"></path><path d="m24 23h-10c-.552 0-1 .447-1 1v10c0 .553.448 1 1 1h10c.552 0 1-.447 1-1v-10c0-.553-.448-1-1-1zm-1 10h-8v-8h8z"></path><path d="m24 37h-10c-.552 0-1 .447-1 1v10c0 .553.448 1 1 1h10c.552 0 1-.447 1-1v-10c0-.553-.448-1-1-1zm-1 10h-8v-8h8z"></path>
+</g></svg></span>
+            <h4 class="u-custom-font u-text u-text-12"> 02</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-custom-color-1 u-footer u-footer" id="sec-8643"><div class="u-align-left u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-body-color u-text-variant u-text-1">MADE WITH&nbsp;❤️ BY<span style="font-weight: 700;"> INSOMNIACS</span>
+        </p>
+      </div></footer>
+  </body>
+</html>

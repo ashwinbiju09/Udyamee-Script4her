@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Place your kit's code here -->
+    <script src="https://kit.fontawesome.com/e10acf3cb1.js" crossorigin="anonymous"></script>
+</head> 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  width: 300px;
+  height: 500px;
+  padding: 15px;
+  background-color: white;
+}
+
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 8px 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: black;
+}
+
+.header {
+  text-align: left;
+  padding: 0px;
+  background-color: white;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.circular--square {
+  border-radius: 50%;
+  vertical-align: top;
+  float: left;
+}
+
+h2{
+  margin-top:30px;
+  margin-right: 30px;
+  margin-left: 100px;
+  margin-bottom: 30px;
+}
+
+.star{
+  float:right;
+}
+
+i{
+  display: inline-block;
+  margin-right: 0.7em;
+}
+
+.row1 {
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that sits next to each other */
+.column1 {
+  box-sizing: border-box;
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.topnav {
+  overflow: hidden;
+  border: black;
+  padding:32px;
+  background: linear-gradient(to bottom right, #9795ef ,#f9c5d1 );
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  border: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  border: black;
+}
+
+.topnav a.active {
+  background-color: #cacaca;
+  color: white;
+  border: black;
+}
+
+.topnav .search-container {
+  float: right;
+  border: black;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: black;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: black;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+  border: black;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+    border: black;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+    border: 1px solid black;  
+  }
+  .topnav input[type=text] {
+    border: 1px solid black;  
+  }
+}
+
+
+</style>
+<body>
+
+<!-- Header -->
+
+<div class="header">
+<div class="topnav">
+  <h1 style ="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; ">Search entrepreneurs with their works</h1>
+<div class="search-container">
+    <input type="text" placeholder="Search.." name="search">
+    <button type="submit"><i class="fa fa-search"></i></button>
+  </div></div></div>
+
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    
+    <img src="{{ url_for('static', filename='1.jpg') }}" style="width:100%" onclick="openForm()">
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <img class="star" src="{{ url_for('static', filename='4star.png') }}" style="width:30%" >
+        <img class="circular--square" src="{{ url_for('static', filename='woman.png') }}" style="width:35%" >
+        <h2>Priya Handicrafts</h2>
+        <div>
+        <i class="fa fa-user" style="font-size:21px;"></i>
+        <span>Priya Gunasekaran</span></div>
+        <br>
+        <div>
+          <i class="fa fa-map-marker" style="font-size:21px;"></i>
+          <span>Gandhi Street, Theni-18</span></div>
+          <br>
+          <div>
+            <i class="fa fa-phone" style="font-size:21px;"></i>
+            <span>9003453216</span></div>
+            <br>
+            <div>
+              <i class="fa fa-star"></i>
+            <span>Beginner</span></div>
+        <br>
+        <div class="row1">
+          <div class="column1">
+            <img src="{{ url_for('static', filename='6.jpg') }}" style="width:110%; height:110%;">
+          </div>
+          <div class="column1">
+            <img src="{{ url_for('static', filename='12.jpg') }}" style="width:110%; height:110%;">
+          </div>
+          <div class="column1">
+            <img src="{{ url_for('static', filename='18.jpg') }}" style="width:100%; height:110%;">
+          </div>
+        </div>
+        <div class="row1">
+          <div class="column1">
+            <img src="{{ url_for('static', filename='21.jpg') }}" style="width:110%; height:110%;">
+          </div>
+          <div class="column1">
+            <img src="{{ url_for('static', filename='5.jpg') }}" style="width:110%; height:110%;">
+          </div>
+          <div class="column1">
+            <img src="{{ url_for('static', filename='17.jpg') }}" style="width:100%; height:110%;">
+          </div>
+        </div>
+        <br>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+    <img src="{{ url_for('static', filename='2.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='3.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='4.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='5.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='6.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='7.jpg') }}" style="width:100%" onclick="openForm2()">
+    <div class="form-popup" id="myForm2">
+      <form action="/action_page.php" class="form-container">
+        <img class="star" src="{{ url_for('static', filename='5star.png') }}" style="width:30%" >
+        <img class="circular--square" src="{{ url_for('static', filename='woman.png') }}" style="width:35%" >
+        <h2>Harshita Handicrafts</h2>
+        <div>
+        <i class="fa fa-user" style="font-size:21px;"></i>
+        <span>Harshita Krishnan</span></div>
+        <br>
+        <div>
+          <i class="fa fa-map-marker" style="font-size:21px;"></i>
+          <span>Randy road, Mumbai-02</span></div>
+          <br>
+          <div>
+            <i class="fa fa-phone" style="font-size:21px;"></i>
+            <span>9994466813</span></div>
+            <br>
+            <div>
+              <i class="fa fa-star"></i>
+            <span>Professional</span></div>
+      
+        <div class="row1">
+          <div class="column1">
+            <img src="{{ url_for('static', filename='h1.jpg') }}" style="width:110%; height:100%;">
+          </div>
+          <div class="column1">
+            <img src="{{ url_for('static', filename='h2.jpg') }}" style="width:110%; height:100%;">
+          </div>
+          <div class="column1">
+            <img src="{{ url_for('static', filename='h4.jpg') }}" style="width:100%; height:100%;">
+          </div>
+        </div>
+        <br>
+        <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+      </form>
+    </div>
+    <img src="{{ url_for('static', filename='17.jpg') }}" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="{{ url_for('static', filename='8.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='9.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='10.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='11.jpg') }}" style="width:100%" onclick="openForm1()">
+    <div class="form-popup" id="myForm1">
+      <form action="/action_page.php" class="form-container">
+        <img class="star" src="{{ url_for('static', filename='4star.png') }}" style="width:30%" >
+        <img class="circular--square" src="{{ url_for('static', filename='woman.png') }}" style="width:35%" >
+        <h2>Gaavom Handicrafts</h2>
+        <div>
+        <i class="fa fa-user" style="font-size:21px;"></i>
+        <span>Thenmozhi</span></div>
+        <br>
+        <div>
+          <i class="fa fa-map-marker" style="font-size:21px;"></i>
+          <span>Tg Street, Gujarat-09</span></div>
+          <br>
+          <div>
+            <i class="fa fa-phone" style="font-size:21px;"></i>
+            <span>93567680253</span></div>
+            <br>
+            <div>
+              <i class="fa fa-star"></i>
+            <span>Beginner</span></div>
+      
+        <div class="row1">
+          <div class="column1">
+            <img src="{{ url_for('static', filename='20.jpg') }}" style="width:110%; height:110%;">
+          </div>
+          <div class="column1">
+            <img src="{{ url_for('static', filename='13.jpg') }}" style="width:110%; height:110%;">
+          </div>
+          <div class="column1">
+            <img src="{{ url_for('static', filename='10.jpg') }}" style="width:100%; height:110%;">
+          </div>
+        </div>
+        <div class="row1">
+          <div class="column1">
+            <img src="{{ url_for('static', filename='3.jpg') }}" style="width:50%; height:70%;">
+          </div>
+        </div>
+        <button type="button" class="btn cancel" onclick="closeForm1()">Close</button>
+      </form>
+    </div>
+    <img src="{{ url_for('static', filename='12.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='13.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='4.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='5.jpg') }}" style="width:100%">
+    
+  </div>  
+  <div class="column">
+    <img src="{{ url_for('static', filename='14.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='15.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='16.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='17.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='18.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='19.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='20.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='1.jpg') }}" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="{{ url_for('static', filename='21.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='1.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='2.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='4.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='5.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='13.jpg') }}" style="width:100%">
+    <img src="{{ url_for('static', filename='22.jpg') }}" style="width:100%">
+  </div>
+</div>
+
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function openForm1() {
+    document.getElementById("myForm1").style.display = "block";
+  }
+
+  function openForm2() {
+    document.getElementById("myForm2").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
+  function closeForm1() {
+    document.getElementById("myForm1").style.display = "none";
+  }
+
+  function closeForm2() {
+    document.getElementById("myForm2").style.display = "none";
+  }
+
+  </script>
+  
+</body>
+</html>
